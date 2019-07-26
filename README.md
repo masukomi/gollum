@@ -78,10 +78,20 @@ By default, Gollum ships with the `kramdown` gem to render Markdown. However, yo
 Simply:
 
 1. Navigate to your git repository (wiki) via the command line.
-2. Run: `gollum`.
+2. Run: `gm`
 3. Open `http://localhost:4567` in your browser.
 
-This will start up a web server (WEBrick) running Gollum with a web interface, where you can view and edit your wiki.
+This will start up a web server (WEBrick) running Gollum with a web interface, where you can view and edit your wiki. It will also "disown" the process so you don't have to worry about accidentally killing the server when you close your terminal window.
+
+If you need to kill the gollum process `pkill gollumn` is usually sufficent.
+
+#### Requiring Authentication:
+To enable Basic Auth rename `authentication_example.rb` to `authentication.rb` the `gm` script will notice 
+this file and instruct Gollum to use it for authentication.
+
+On macOS it will look for a "generic" password in your keychain named `gollum-wiki`.  On other systems it will ask you to enter the password that users will have to enter. 
+
+TODO: make it support an environment variable for setting the password.
 
 ### Running from source
 
