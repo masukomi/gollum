@@ -1,2 +1,3 @@
-[[People]]
-[[Places]]
+## Sections
+* [[People]]
+* [[Places]]
