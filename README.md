@@ -45,9 +45,11 @@ Varies depending on operating system, package manager and Ruby installation. Gen
 
 1. Ruby is best installed either via [RVM](https://rvm.io/) or a package manager of choice.
 2. Gollum is best installed via RubyGems:  
-	```
-	[sudo] gem install gollum
-	```
+```
+gem install gollum -v 4.1.4
+```
+
+The official Gollum repo has moved on to v5.x but that introduced breaking changes that I haven't dealt with yet. 
 
 Installation examples for individual systems can be seen [here](https://github.com/gollum/gollum/wiki/Installation).
 
@@ -97,8 +99,9 @@ TODO: make it support an environment variable for setting the password.
 
 1. `git clone https://github.com/gollum/gollum`
 2. `cd gollum`
-3. `[sudo] bundle install` (may not always be necessary).
-4. `bundle exec bin/gollum`
+3. `git checkout v4.1.4`
+4. `bundle install` (may not always be necessary).
+5. `bundle exec bin/gollum`
 	* Like that, gollum assumes the target wiki (git repository) is the project repository itself. If it's not, execute `bundle exec bin/gollum <path-to-wiki>` instead.
 5. Open `http://localhost:4567` in your browser.
 
